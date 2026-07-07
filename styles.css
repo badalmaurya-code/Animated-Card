@@ -1,76 +1,181 @@
-* {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: aliceblue;
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f1f2f2;
+    color: #1c1c1c;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-h3 {
-    color: purple;
+/* Container for the main content */
+header, main {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 24px;
+    box-sizing: border-box;
 }
 
-H1 {
-    color: #b92b27;
+/* Header Styles */
+header {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.5em;
+    color: #b92b27; /* Quora's brand red */
+    margin: 0 0 20px 0;
+    font-weight: 700;
+}
+
+header h1 div {
+    display: flex;
+    gap: 10px;
+}
+
+header h1 button {
+    font-size: 0.4em;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 #login {
-    background-color: white;
+    background-color: #f1f2f2;
+    color: #333;
+}
+
+#login:hover {
+    background-color: #e2e3e3;
 }
 
 #signup {
-    background-color: #b92b27;
+    background-color: #2e69ff;
+    color: white;
 }
 
-.upvote {
-    background-color: green;
-    color: rgb(255, 255, 255);
+#signup:hover {
+    background-color: #1a58e8;
 }
 
-p a {
-    color: purple;
-    background-color: yellowgreen;
+header > div {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-
-p + h3 {
-    text-decoration: greenyellow underline;
+header input[type="text"],
+header input[type="password"] {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    flex-grow: 1;
+    font-size: 1rem;
 }
 
-.upvote + button {
-    background-color: cornflowerblue;
+header input:focus {
+    outline: none;
+    border-color: #2e69ff;
+    box-shadow: 0 0 0 2px rgba(46, 105, 255, 0.2);
 }
 
-div > input {
-    background-color: rgb(127, 4, 127);
-}
-input[type="text"] {
-    color: aliceblue;
-}
-
-input[type="password"] {
-    color: rgb(84, 206, 187);
-}
-button:hover {
-    background-color: blue;
-    color: rgb(249, 203, 193);
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
 }
 
-h3:hover {
-    text-decoration: overline;
-}
-button:active {
-    background-color: rgb(174, 226, 43);
-    color: black;
-}
-
-input[type="radio"]:checked + label {
-    color: #b92b27;
-    font-weight: 800;
+nav a {
+    text-decoration: none;
+    color: #636466;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
 }
 
-h1::first-letter {
-    color: rgb(143, 0, 0);
+nav a:hover {
+    color: #1c1c1c;
+    border-bottom-color: #b92b27;
 }
 
-h3::selection {
-    background-color: rgb(183, 255, 15);
-    color: rgb(5, 5, 27)
+hr {
+    border: none;
+    border-top: 1px solid #e2e3e3;
+    margin: 20px 0;
+}
+
+/* Main Content Styles */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #636466;
+}
+
+main h3 {
+    margin: 5px 0 10px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1c1c1c;
+}
+
+a.follow {
+    text-decoration: none;
+    color: #2e69ff;
+    font-weight: 500;
+}
+
+a.follow:hover {
+    text-decoration: underline;
+}
+
+main span {
+    display: flex;
+    gap: 10px;
+}
+
+main button {
+    background-color: #f1f2f2;
+    border: 1px solid #dee2e6;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+main button:hover {
+    background-color: #e2e3e3;
+}
+
+main button.upvote {
+    color: #2e69ff;
+    border-color: #abbedf;
+}
+
+/* Final Radio Buttons */
+body > div {
+    margin-top: 20px;
 }
